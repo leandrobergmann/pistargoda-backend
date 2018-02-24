@@ -1,0 +1,153 @@
+{
+  "actors": [
+    {
+      "id": "de78133e-daa8-4484-9038-135003598cc5",
+      "text": "Mobee",
+      "type": "istar.Actor",
+      "x": 77,
+      "y": 124,
+      "nodes": [
+        {
+          "id": "3f734e92-ed0c-4152-9001-8f742bbad3db",
+          "text": "G1: Transport info is shared [G3#G4]",
+          "type": "istar.Goal",
+          "x": 385,
+          "y": 151,
+          "customProperties": {
+            "selected": "true"
+          }
+        },
+        {
+          "id": "c7a179f7-b3aa-43e7-92d3-52cbcddf83eb",
+          "text": "G3: Manual data is sent [G9#G8]",
+          "type": "istar.Goal",
+          "x": 251,
+          "y": 244
+        },
+        {
+          "id": "4c01389a-bcde-42f8-8d99-d3b7cbaa2b9f",
+          "text": "G4: Automatic data is sent",
+          "type": "istar.Goal",
+          "x": 477,
+          "y": 245
+        },
+        {
+          "id": "1288f213-9ad0-4d93-a9aa-5d6ca396100d",
+          "text": "G9: Qualification is collected",
+          "type": "istar.Goal",
+          "x": 164,
+          "y": 337
+        },
+        {
+          "id": "c281eb93-abc0-4466-b469-698a26b5b82e",
+          "text": "G8: Modification is collected",
+          "type": "istar.Goal",
+          "x": 320,
+          "y": 340
+        },
+        {
+          "id": "6da9a1a8-d22e-45bf-a28e-24a03daeee88",
+          "text": "T1: Track line location",
+          "type": "istar.Task",
+          "x": 478,
+          "y": 336
+        },
+        {
+          "id": "e8ea7a55-a1ab-4f07-8076-0e61c50d429a",
+          "text": "T1: Process modification",
+          "type": "istar.Task",
+          "x": 327,
+          "y": 432
+        },
+        {
+          "id": "a5b18920-a039-4827-a8ef-ae67f6d881a2",
+          "text": "T1: Process qualification [T1.1;T1.2]",
+          "type": "istar.Task",
+          "x": 165,
+          "y": 435
+        },
+        {
+          "id": "0053dec8-999b-4374-adb2-7a609ccc2396",
+          "text": "T1.1: Testing",
+          "type": "istar.Task",
+          "x": 77,
+          "y": 537,
+          "customProperties": {
+            "creationProperty": "assertion condition varTesting%"
+          }
+        },
+        {
+          "id": "c45a33b6-fd30-4504-ac3f-12c8095d592f",
+          "text": "T1.2: Exception",
+          "type": "istar.Task",
+          "x": 239,
+          "y": 541
+        }
+      ]
+    }
+  ],
+  "dependencies": [],
+  "links": [
+    {
+      "id": "c538a1b1-d43a-41b3-b5d5-5af1c6fadd35",
+      "type": "istar.AndRefinementLink",
+      "source": "4c01389a-bcde-42f8-8d99-d3b7cbaa2b9f",
+      "target": "3f734e92-ed0c-4152-9001-8f742bbad3db"
+    },
+    {
+      "id": "8a4e9eab-fd4b-4a1c-9eed-3f9786da36ee",
+      "type": "istar.AndRefinementLink",
+      "source": "c7a179f7-b3aa-43e7-92d3-52cbcddf83eb",
+      "target": "3f734e92-ed0c-4152-9001-8f742bbad3db"
+    },
+    {
+      "id": "2a2de391-9a68-4522-8dda-6fc6128413a6",
+      "type": "istar.AndRefinementLink",
+      "source": "1288f213-9ad0-4d93-a9aa-5d6ca396100d",
+      "target": "c7a179f7-b3aa-43e7-92d3-52cbcddf83eb"
+    },
+    {
+      "id": "08f8be20-f8b1-4186-8c27-0c150b757f11",
+      "type": "istar.AndRefinementLink",
+      "source": "c281eb93-abc0-4466-b469-698a26b5b82e",
+      "target": "c7a179f7-b3aa-43e7-92d3-52cbcddf83eb"
+    },
+    {
+      "id": "011434e6-550b-4ba9-9142-8262c32bf52e",
+      "type": "istar.OrRefinementLink",
+      "source": "a5b18920-a039-4827-a8ef-ae67f6d881a2",
+      "target": "1288f213-9ad0-4d93-a9aa-5d6ca396100d"
+    },
+    {
+      "id": "675744d0-6817-44fb-b75a-b5b35d33891c",
+      "type": "istar.OrRefinementLink",
+      "source": "e8ea7a55-a1ab-4f07-8076-0e61c50d429a",
+      "target": "c281eb93-abc0-4466-b469-698a26b5b82e"
+    },
+    {
+      "id": "bb1e7683-9f13-4c90-9379-b254b10a0a38",
+      "type": "istar.OrRefinementLink",
+      "source": "6da9a1a8-d22e-45bf-a28e-24a03daeee88",
+      "target": "4c01389a-bcde-42f8-8d99-d3b7cbaa2b9f"
+    },
+    {
+      "id": "14caf2c0-1835-46fd-9b94-055699af8a40",
+      "type": "istar.AndRefinementLink",
+      "source": "0053dec8-999b-4374-adb2-7a609ccc2396",
+      "target": "a5b18920-a039-4827-a8ef-ae67f6d881a2"
+    },
+    {
+      "id": "922438bb-af41-4565-ad9c-52d91cf2e0b1",
+      "type": "istar.AndRefinementLink",
+      "source": "c45a33b6-fd30-4504-ac3f-12c8095d592f",
+      "target": "a5b18920-a039-4827-a8ef-ae67f6d881a2"
+    }
+  ],
+  "tool": "pistar.1.0.0",
+  "istar": "2.0",
+  "saveDate": "Sat, 06 Jan 2018 23:53:39 GMT",
+  "diagram": {
+    "width": 1881,
+    "height": 1172
+  }
+}
